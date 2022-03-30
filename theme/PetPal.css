@@ -1,0 +1,47 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0 0 0 0;
+}
+
+.container {
+    margin: 0 0 0 0;
+}
+
+.profilePicContainer {
+    height: 33vh;
+    width: 100vw;
+    margin: 0 0 0 0;
+}
+
+.profilePicContainer #profilePic {
+   height: 33vh;
+   width: 100vw;
+   margin: 0 0 0 0;
+   display: block;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center
+}
+
+.petNameContainer {
+    font-weight: 600;
+    font-size: 35px;
+    width: 63vw;
+    height: 5vh;
+    margin: 8vw;
+}
+
+.pinEmoji {
+    height: 2.5vh;
+    width: auto;
+    margin: 8vw;
+}
+
+.pinEmoji #pin {
+    height: 2.5vh;
+    width: auto;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+ }
