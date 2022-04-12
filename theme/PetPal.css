@@ -1,6 +1,7 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0 0 0 0;
+    padding-bottom: 15vh;
 }
 
 .nopadding {
@@ -15,24 +16,24 @@ body {
 }
 
 .profilePicContainer #profilePic {
-   height: 33vh;
-   width: 100vw;
-   margin: 0 0 0 0;
-   display: block;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    display: block;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.userData {
+.userDataContainer {
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 10%;
 }
-.petNameContainer {
+.name {
     font-weight: 600;
     font-size: 35px;
-    padding-top: 12%;
+    padding-top: 8%;
     padding-bottom: 8%;
 }
 
@@ -42,9 +43,16 @@ body {
     position: relative;
 }
 
+.ownerCity {
+    color: #707070;
+}
+
+.petOwner {
+    color: #707070;
+}
 .pinEmoji #pin {
-    position:absolute;
-    width:100%;
+    position: absolute;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
 }
@@ -56,8 +64,9 @@ body {
 }
 
 #ownerProfilePicture {
-    position:absolute;
-    width:100%;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
     max-width: 100%;
     max-height: 100%;
 }
@@ -66,6 +75,8 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .buttonRow #edit {
@@ -76,11 +87,169 @@ body {
 .buttonRow #addActivity {
     background-color: #F3C42E;
     border-color: #F3C42E;
-    margin-left:2%;
-    margin-right:2%;
 }
 
 .buttonRow #moreOptions {
     background-color: #F79F4F;
     border-color: #F79F4F;
+}
+
+.bio {
+    height: 15vh;
+    padding-top: 7%;
+    padding-left: 7%;
+    padding-right: 10%;
+    padding-bottom: 7%;
+    color: #707070;
+}
+
+.readMore {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 7%;
+}
+
+.readMore #readMore {
+    color: #EE6851;
+    font-weight: 700;
+}
+
+.petInfoContainer {
+    height:15vh;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#ageContainer, #breedContainer, #sizeContainer {
+    font-weight: 600;
+    background-color: #00000029;
+}
+
+#ageContainer p, #breedContainer p, #sizeContainer p {
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#birthday-cake, #breed, #size{
+    margin-left: 5%;
+    margin-top: 5%;
+    max-width: 50%;
+    max-height: auto;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 40vw 40vw;
+    gap: 6%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#hiddenGallery {
+    display: none;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 40vw 40vw;
+    gap: 6%;
+    padding-top: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    display: block;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.loadButton {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.loadButton #loadButton {
+    background-color: #F3C42E;
+    border-color: #F3C42E;
+}
+
+div[id*=header] {
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    gap: 6%;
+    padding-top: 10%;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.palsContainer #pals, .palsContainer #hiddenPals {
+    display: grid;
+    grid-template-columns: 17vw 17vw 17vw 17vw;
+    grid-template-rows: 17vw;
+    gap: 3%;
+    padding-top: 3%;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.palsContainer #pals {
+    display: grid;
+    grid-template-columns: 17vw 17vw 17vw 17vw;
+    grid-template-rows: 17vw;
+    gap: 4%;
+    padding-top: 3%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.palsContainer #hiddenPals {
+    display: none;
+    grid-template-columns: 17vw 17vw 17vw 17vw;
+    grid-template-rows: 17vw;
+    gap: 4%;
+    padding-top: 3%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.loadButton #loadPalsButton {
+    background-color: #F79F4F;
+    border-color: #F79F4F;
+}
+
+.ownerInfoContainer #ownerInfo {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 17vw 62vw;
+    grid-template-rows: 17vw;
+    gap: 7%;
+    padding-top: 3%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.ownerInfoContainer #ownerLanguages {
+    display: inline-grid;
+    grid-template-columns: 6vw 62vw;
+    grid-template-rows: 6vw;
+    gap: 4%;
+    padding-top: 3%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+#dock {
+    display: grid;
+    grid-template-columns: 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw;
+    grid-template-rows: 11.6vw;
+    gap: 10%;
+    margin-left: -22%;
+}
+
+.navbar {
+    box-shadow: 3px 3px 5px 6px #ccc;
 }

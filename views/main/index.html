@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="../../theme/bootstrap.css" type="text/css"/>
     <script src="../../scripts/bootstrap.js"></script>
     <script src="../../scripts/jquery-3.6.0.js"></script>
+    <script src="../../scripts/utils.js"></script>
 </head>
 <body>
     <div class="profilePicContainer">
         <img id="profilePic" src="../../images/Doggo.PNG">
     </div>
-    <div class="userData">
+
+    <div class="userDataContainer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
                     <div class="row d-flex align-items-center">
-                        <div class="petNameContainer">
+                        <div class="name">
                             Tako
                         </div>
                     </div>
@@ -43,16 +45,170 @@
                 </div>
                 <div class="col align-self-end">
                     <div class="ownerProfilePicContainer">
-                        <img class="rounded-circle img-responsive" id="ownerProfilePicture" src="../../images/58442130_658554567937801_3062714524210561024_n.jpg">
+                        <img class="rounded-circle img-fluid" id="ownerProfilePicture" src="../../images/58442130_658554567937801_3062714524210561024_n.jpg">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="buttonRow">
-        <button type="button" id="edit" class="btn btn-primary">Edit Profile</button>
-        <button type="button" id="addActivity" class="btn btn-primary">Add Activity</button>
-        <button type="button" id="moreOptions" class="btn btn-primary">More</button>
+        <div class="container-fluid nopadding">
+            <div class="row justify-content-around">
+                <div class="col-4 nopadding text-center">
+                    <button type="button" id="edit" class="btn btn-primary">Edit Profile</button>
+                </div>
+                <div class="col-4 nopadding text-center">
+                    <button type="button" id="addActivity" class="btn btn-primary">Add Activity</button>
+                </div>
+                <div class="col-3 nopadding text-center">
+                    <button type="button" id="moreOptions" class="btn btn-primary">More</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="bio">
+        <p>My favorite things are peanut butter, stuffed animals, and all things feet related. Long live the smelly socks! </p>
+    </div>
+
+    <div class="readMore">
+        <button type="button" id="readMore" class="btn btn-primary-outline">Read More</button>
+    </div>
+
+    <div class="petInfoContainer">
+        <div class="container nopadding">
+            <div class="row gx-2 justify-content-around d-flex align-items-end">
+                <div class="col-3 rounded" id="ageContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="../../theme/icons/birthday-cake.png">
+                    </div>
+                    <div><br></div>
+                    <div class="row justify-content-around">
+                        <p>2 yr</p>
+                    </div>
+                </div>
+                <div class="col-3 rounded" id="breedContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="../../theme/icons/venus.png">
+                    </div>
+                    <div><br></div>
+                    <div class="row justify-content-around">
+                        <p>Shiba Inu</p>
+                    </div>
+                </div>
+                <div class="col-3 rounded" id="sizeContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="../../theme/icons/measuring-tape.png">
+                    </div>
+                    <div><br></div>
+                    <div class="row justify-content-around">
+                        <p>Medium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- This section should have some toggle effect, look into using Bootstrap navbar -->
+    <div id="gallery">
+        <img src="../../images/Post-1.PNG">
+        <img src="../../images/Post-2.PNG">
+        <img src="../../images/Post-3.PNG">
+        <img src="../../images/Post-4.PNG">
+    </div>
+
+    <div id="hiddenGallery">
+        <img src="../../images/Post-5.PNG">
+        <img src="../../images/Post-6.PNG">
+        <img src="../../images/Post-7.PNG">
+    </div>
+
+    <div class="loadButton text-center">
+        <button type="button" id="loadButton" class="btn btn-primary" onclick="loadMorePictures()">See All Activities</button>
+    </div>
+    <!-- End section -->
+
+    <hr style="width:80%; margin: auto;">
+
+    <div class="palsContainer">
+        <div id="header">
+            <p style="text-align: left; color: #EE6851; font-weight: 700;">
+                Favorite PetPals</p>
+            <p style="text-align: right; color: #707070;">
+                8 PetPals</p>
+        </div>
+        <div id="pals">
+            <img class="rounded-circle" src="../../images/Friend Post -2.PNG">
+            <img class="rounded-circle" src="../../images/adorable-animal-animal-photography-259803.jpg">
+            <img class="rounded-circle" src="../../images/animal-animal-photography-bunny-104373.jpg">
+            <img class="rounded-circle" src="../../images/adorable-animal-bull-160846.jpg">
+            <p style="text-align: center; color: #707070;">Fendi</p>
+            <p style="text-align: center; color: #707070;">Eddy</p>
+            <p style="text-align: center; color: #707070;">Sammy</p>
+            <p style="text-align: center; color: #707070;">Mochi</p>
+        </div>
+        <div id="hiddenPals">
+            <img class="rounded-circle" src="../../images/adorable-animal-animal-photography-1629781.jpg">
+            <img class="rounded-circle" src="../../images/adorable-animal-blur-406014.jpg">
+            <img class="rounded-circle" src="../../images/animal-domestic-hand-56733.jpg">
+            <img class="rounded-circle" src="../../images/Friend 2.PNG">
+            <p style="text-align: center; color: #707070;">Goofy</p>
+            <p style="text-align: center; color: #707070;">Tofu</p>
+            <p style="text-align: center; color: #707070;">Marcus</p>
+            <p style="text-align: center; color: #707070;">Shampoo</p>
+        </div>
+        <div class="loadButton text-center">
+            <button type="button" id="loadPalsButton" class="btn btn-primary" onclick="loadMorePals()">See All PetPals</button>
+        </div>
+    </div>
+
+    <br>
+    <hr style="width:80%; margin: auto;">
+
+    <div class="ownerInfoContainer">
+        <div id="header">
+            <p style="text-align: left; color: #EE6851; font-weight: 700;">
+                Meet the Owner</p>
+        </div>
+        <div id="ownerInfo">
+            <img class="rounded-circle" src="../../images/58442130_658554567937801_3062714524210561024_n.jpg">
+            <p class="name" style="font-size: 30px;"> Hi, I'm Tiffany </p>
+        </div>
+        <div id="ownerBio">
+            <p class="bio" style="padding-left: 11%; padding-right: 11%">
+                In my spare time, I enjoy curating playlists, adding to my earring collection, and playing with my Shiba Inu, Tako.
+            </p>
+        </div>
+        <div id="ownerLanguages">
+            <img src="../../theme/icons/chat.png">
+            <p style="text-align: left; color: #707070; ">
+                English, Chinese</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <nav class="navbar navbar-light bg-light py-3 fixed-bottom justify-content-around nopadding">
+            <div id="dock">
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="search" src="../../theme/icons/find.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="calendar" src="../../theme/icons/calendar.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding" onclick="scrollToTop()">
+                    <img id="home" src="../../theme/icons/PetPal_Paw.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="notifications" src="../../theme/icons/pet-bell.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="messages" src="../../theme/icons/email.png">
+                </button>
+            </div>
+        </nav>
+    </footer>
+    
 </body>
 </html>
