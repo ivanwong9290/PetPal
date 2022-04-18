@@ -1,7 +1,22 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0 0 0 0;
-    padding-bottom: 15vh;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    display: block;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-control {
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color:rgba(0,0,0,0) !important;
 }
 
 .nopadding {
@@ -157,16 +172,6 @@ body {
     padding-right: 7%;
 }
 
-img {
-    height: 100%;
-    width: 100%;
-    margin: 0 0 0 0;
-    display: block;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .loadButton {
     margin-top: 10%;
     margin-bottom: 10%;
@@ -252,4 +257,36 @@ div[id*=header] {
 
 .navbar {
     box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.logo {
+    padding-top: 6%;
+    width: 35vw;
+    height: 35vw;
+    margin: auto;
+}
+
+#loginForm {
+    padding-top: 9%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 25%;
+    font-size: 20px;
+}
+
+#loginForm #loginButton {
+    background-color: #EE6851;
+    border-color: #EE6851;
+}
+
+.customButtonWidth {
+    width: 20vw !important;
+}
+
+.helper {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 40vw 40vw;
+    padding-left: 10%;
+    padding-right: 10%;
 }
