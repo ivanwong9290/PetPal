@@ -4,47 +4,48 @@ i<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetPal</title>
-    <link rel="stylesheet" href="../../theme/PetPal.css" type="text/css"/>
+    <title>PetPal Login</title>
+    <link rel="stylesheet" href="../../theme/PetPalLogin.css" type="text/css"/>
     <link rel="stylesheet" href="../../theme/bootstrap.css" type="text/css"/>
     <script src="../../scripts/bootstrap.js"></script>
     <script src="../../scripts/jquery-3.6.0.js"></script>
     <script src="../../scripts/utils.js"></script>
 </head>
 <!-- TODO: Apply flexbox solution for non-scrolling viewport -->
-<body style="padding-top: 5vh;
-             font-size:15px; 
-             color:#707070;
-             height: 100%;
-             background: linear-gradient(180deg, #FFFFFF 20%, #FCEFE6 80%);
-             ">
+<body>
     <div class="logo">
         <img src="../../theme/icons/PetPal_Logo.PNG">
     </div>
-    <p style="font-size: 45px; 
+    <p class="nopadding" 
+       style="font-size: 45px;
+              font-size: 11vw; 
               font-weight: 700;
               color: #EE6851; 
               text-align: center;">
               PetPal</p>
-    <p style="text-align: center;">Welcome to our pet community!</p>
+    <p class="nopadding"
+       style="text-align: 
+              center; 
+              font-size: 3.75vw">
+              Welcome to our pet community!</p>
     
     <form id="loginForm">
         <div class="form-group border-bottom border-dark">
-          <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <label for="emailInput">Email</label>
+          <input type="email" class="form-control" id="emailInput" style="font-size: 5vw">
         </div>
         <br>
         <div class="form-group border-bottom border-dark">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" id="passwordInput" style="font-size: 5vw">
         </div>
         <br>
         <br>
         <div class="text-center">
-            <button type="button" class="btn btn-primary btn-lg text-center" id="loginButton" onclick=toMainPage()>Login</button>
+            <button type="button" class="btn btn-primary w-50 text-center rounded-lg btn-lg p-2" id="loginButton" onclick=toMainPage()>Log In</button>
         </div>
     </form>
-    <div class="helper text-center" style="height:15vh">
+    <div class="helper text-center">
         <p>Forgot Password</p>
         <p>Sign Up</p>
     </div>
