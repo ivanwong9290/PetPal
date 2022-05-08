@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    margin: 0 0 0 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 15vh;
 }
 
 img {
@@ -45,9 +52,15 @@ img {
     padding-right: 5%;
     padding-bottom: 10%;
 }
+
+.userDataContainer p {
+    font-size: 4.5vw
+}
+
 .name {
     font-weight: 600;
     font-size: 35px;
+    font-size: 10vw;
     padding-top: 8%;
     padding-bottom: 8%;
 }
@@ -59,10 +72,12 @@ img {
 }
 
 .ownerCity {
+    font-size: 4vw;
     color: #707070;
 }
 
 .petOwner {
+    font-size: 4vw;
     color: #707070;
 }
 .pinEmoji #pin {
@@ -94,6 +109,10 @@ img {
     padding-right: 7%;
 }
 
+.buttonRow .btn {
+    font-size: 4vw;
+}
+
 .buttonRow #edit {
     background-color: #EE6851;
     border-color: #EE6851;
@@ -110,33 +129,39 @@ img {
 }
 
 .bio {
-    height: 15vh;
+    word-wrap: normal;
     padding-top: 7%;
     padding-left: 7%;
     padding-right: 10%;
     padding-bottom: 7%;
+    font-size: 4.5vw;
     color: #707070;
 }
 
 .readMore {
-    margin-top: 5%;
-    margin-bottom: 2%;
-    margin-left: 7%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-left: 7%;
+    padding-right: 10%;
 }
 
 .readMore #readMore {
     color: #EE6851;
     font-weight: 700;
+    font-size: 4.5vw;
+    text-align: left !important;
 }
 
 .petInfoContainer {
-    height:15vh;
+    padding-top: 5%;
     padding-left: 7%;
     padding-right: 7%;
+    padding-bottom: 7%;
 }
 
 #ageContainer, #breedContainer, #sizeContainer {
     font-weight: 600;
+    font-size: 4.5vw;
     background-color: #00000029;
 }
 
@@ -178,8 +203,13 @@ img {
 }
 
 .loadButton #loadButton {
+    font-size: 4.5vw;
     background-color: #F3C42E;
     border-color: #F3C42E;
+}
+
+.palsContainer p {
+    font-size: 4.5vw;
 }
 
 div[id*=header] {
@@ -222,8 +252,13 @@ div[id*=header] {
 }
 
 .loadButton #loadPalsButton {
+    font-size: 4.5vw;
     background-color: #F79F4F;
     border-color: #F79F4F;
+}
+
+.ownerInfoContainer p {
+    font-size: 4.5vw;
 }
 
 .ownerInfoContainer #ownerInfo {

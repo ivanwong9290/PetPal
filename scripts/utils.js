@@ -25,3 +25,7 @@ function loadLessPals() {
     document.getElementById("loadPalsButton").innerHTML = "See All PetPals";
     document.getElementById("loadPalsButton").onclick = function() {loadMorePals();}
 }
+
+function toMainPage() {
+    window.location.href = "index.html"
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width ">
     <title>PetPal</title>
     <link rel="stylesheet" href="theme/PetPal.css" type="text/css"/>
     <link rel="stylesheet" href="theme/bootstrap.css" type="text/css"/>
@@ -11,7 +11,7 @@
     <script src="scripts/jquery-3.6.0.js"></script>
     <script src="scripts/utils.js"></script>
 </head>
-<body style="padding-bottom: 15vh;">
+<body>
     <div class="profilePicContainer">
         <img id="profilePic" src="images/Doggo.PNG">
     </div>
@@ -56,29 +56,37 @@
         <div class="container-fluid nopadding">
             <div class="row justify-content-around">
                 <div class="col-4 nopadding text-center">
-                    <button type="button" id="edit" class="btn btn-primary">Edit Profile</button>
+                    <button type="button" id="edit" class="btn btn-primary w-100">Edit Profile</button>
                 </div>
                 <div class="col-4 nopadding text-center">
-                    <button type="button" id="addActivity" class="btn btn-primary">Add Activity</button>
+                    <button type="button" id="addActivity" class="btn btn-primary w-100">Add Activity</button>
                 </div>
                 <div class="col-3 nopadding text-center">
-                    <button type="button" id="moreOptions" class="btn btn-primary">More</button>
+                    <button type="button" id="moreOptions" class="btn btn-primary w-100">More</button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="bio">
-        <p>My favorite things are peanut butter, stuffed animals, and all things feet related. Long live the smelly socks! </p>
+        <div class="container-fluid nopadding">
+            <div class="d-flex flex-row">
+                <p>My favorite things are peanut butter, stuffed animals, and all things feet related. Long live the smelly socks! </p>
+            </div>
+        </div>
     </div>
 
     <div class="readMore">
-        <button type="button" id="readMore" class="btn btn-primary-outline">Read More</button>
+        <div class="container-fluid nopadding">
+            <div class="d-flex flex-row">
+                <button type="button" id="readMore" class="btn btn-primary-outline nopadding">Read More</button>
+            </div>
+        </div>
     </div>
 
     <div class="petInfoContainer">
-        <div class="container nopadding">
-            <div class="row gx-2 justify-content-around d-flex align-items-end">
+        <div class="container-fluid nopadding">
+            <div class="row gx-2 justify-content-around">
                 <div class="col-3 rounded" id="ageContainer">
                     <div class="row">
                         <img class="img-fluid" id="birthday-cake" src="theme/icons/birthday-cake.png">
@@ -133,9 +141,9 @@
 
     <div class="palsContainer">
         <div id="header">
-            <p style="text-align: left; color: #EE6851; font-weight: 700;">
+            <p style="text-align: left; color: #EE6851; font-weight: 700; font-size: 4.5vw;">
                 Favorite PetPals</p>
-            <p style="text-align: right; color: #707070;">
+            <p style="text-align: right; color: #707070; font-size: 4.5vw;">
                 8 PetPals</p>
         </div>
         <div id="pals">
@@ -159,7 +167,7 @@
             <p style="text-align: center; color: #707070;">Shampoo</p>
         </div>
         <div class="loadButton text-center">
-            <button type="button" id="loadPalsButton" class="btn btn-primary" onclick="loadMorePals()">See All PetPals</button>
+            <button type="button" id="loadPalsButton" class="btn btn-primary btn-block" onclick="loadMorePals()">See All PetPals</button>
         </div>
     </div>
 
@@ -168,12 +176,12 @@
 
     <div class="ownerInfoContainer">
         <div id="header">
-            <p style="text-align: left; color: #EE6851; font-weight: 700;">
+            <p style="text-align: left; color: #EE6851; font-weight: 700; font-size: 4.5vw;">
                 Meet the Owner</p>
         </div>
         <div id="ownerInfo">
             <img class="rounded-circle" src="images/58442130_658554567937801_3062714524210561024_n.jpg">
-            <p class="name" style="font-size: 30px;"> Hi, I'm Tiffany </p>
+            <p class="name" style="font-size: 30px; font-size: 7vw"> Hi, I'm Tiffany </p>
         </div>
         <div id="ownerBio">
             <p class="bio" style="padding-left: 11%; padding-right: 11%">
