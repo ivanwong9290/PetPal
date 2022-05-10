@@ -29,3 +29,7 @@ function loadLessPals() {
 function toMainPage() {
     window.location.href = "index.html"
 }
+
+function toLoginPage() {
+    window.location.href = "login.html"
+}
