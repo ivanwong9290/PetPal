@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>PetPal</title>
+    <script src="scripts/jquery-3.6.0.js"></script>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/explore-page-utils.js"></script>
+    <link rel="stylesheet" href="theme/PetPalExplore.css" type="text/css" />
+    <link rel="stylesheet" href="theme/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="theme/bootstrap.min.css" type="text/css" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+</head>
+
+<body onload="toExploreFeedTab(1)">
+    <div id="findYourPetPal">
+        <div class="container-fluid nopadding">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row d-flex align-items-center">
+                        <div style="font-size: 5.3vw">
+                            Find your PetPal
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center">
+                        <div style="font-size: 2.5vw">
+                            Find old friends, explore new friends
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 align-self-center nopadding">
+                    <div class="row d-flex align-self-end">
+                        <div class="col-9 nopadding">
+                            <div id="morePetPalAvatars">
+                                <img src="images/Post-1.PNG">
+                                <img src="images/Post-2.PNG">
+                                <img src="images/Post-3.PNG">
+                            </div>
+                        </div>
+                        <div class="col nopadding align-self-center">
+                            <div id="arrowDiv">
+                                <a href="index.html"><i class="arrow right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchBarDiv">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <form class="card card-sm rounded-pill shadow justify-content-center" id="searchField">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-1 searchButton">
+                                <button class="button" type="submit"
+                                    style="background-color: transparent; padding-right: 5px"><img
+                                        src="theme/icons/magnifying-glass.png"></button>
+                            </div>
+                            <div class="col nopadding">
+                                <input class="form-control form-control-sm form-control-plaintext" type="search"
+                                    placeholder="Search for a service, question, or event">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nearbyServicesContainer">
+        <div class="container-fluid nopadding">
+            <div class="row gx-4 justify-content-evenly">
+                <div class="col-3" id="ageContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="theme/icons/birthday-cake.png">
+                    </div>
+                    <div class="row text-center">
+                        <p>Veteriarian</p>
+                    </div>
+                </div>
+                <div class="col-3" id="breedContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="theme/icons/venus.png">
+                    </div>
+                    <div class="row text-center">
+                        <p>Hotels</p>
+                    </div>
+                </div>
+                <div class="col-3" id="sizeContainer">
+                    <div class="row">
+                        <img class="img-fluid" id="birthday-cake" src="theme/icons/measuring-tape.png">
+                    </div>
+                    <div class="row text-center">
+                        <p>Grooming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-4 justify-content-evenly">
+            <div class="col-3" id="ageContainer">
+                <div class="row">
+                    <img class="img-fluid" id="birthday-cake" src="theme/icons/birthday-cake.png">
+                </div>
+                <div class="row text-center">
+                    <p>Training</p>
+                </div>
+            </div>
+            <div class="col-3" id="breedContainer">
+                <div class="row">
+                    <img class="img-fluid" id="birthday-cake" src="theme/icons/venus.png">
+                </div>
+                <div class="row text-center">
+                    <p>Pet Friendly</p>
+                </div>
+            </div>
+            <div class="col-3" id="sizeContainer">
+                <div class="row">
+                    <img class="img-fluid" id="birthday-cake" src="theme/icons/measuring-tape.png">
+                </div>
+                <div class="row text-center">
+                    <p>Dog Walkers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="width:80%; margin: 2vh auto;">
+
+    <div id="exploreFeedDiv">
+        <div id="exploreFeedTabs">
+            <div class="container-fluid nopadding">
+                <div class="row gx-1 justify-content-around">
+                    <div class="col-3 align-items-center">
+                        <div class="row text-center" id="friendsTab">
+                            <button class="btn btn-primary-outline nopadding" style="color: #EE6851;"
+                                onclick="toExploreFeedTab(1)">
+                                Friends
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="row text-center" id="trendingTab">
+                            <button class="btn btn-primary-outline nopadding" style="color: #F3C42E;"
+                                onclick="toExploreFeedTab(2)">
+                                Trending
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row text-center" id="bookmarksTab">
+                            <button class="btn btn-primary-outline nopadding" style="color: #F79F4F;"
+                                onclick="toExploreFeedTab(3)">
+                                Bookmarks
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="exploreFeedContent">
+        </div>
+    </div>
+    <div style="padding-top: 5vh; padding-bottom: 10vh; font-size: 13px; text-align: center;">
+        There are no more posts right now.
+    </div>
+    <footer>
+        <nav class="navbar navbar-light bg-light py-3 fixed-bottom justify-content-around nopadding">
+            <div id="dock">
+                <button class="btn btn-primary-outline nopadding" onclick="scrollToTop()">
+                    <img id="search" src="theme/icons/find.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="calendar" src="theme/icons/calendar.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding" onclick="toMainPage()">
+                    <img id="home" src="theme/icons/PetPal_Paw.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="notifications" src="theme/icons/pet-bell.png">
+                </button>
+                <button class="btn btn-primary-outline nopadding">
+                    <img id="messages" src="theme/icons/email.png">
+                </button>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
